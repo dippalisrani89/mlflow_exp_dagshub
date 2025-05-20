@@ -7,10 +7,12 @@ from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
 import mlflow.sklearn
-
+import dagshub
+dagshub.init(repo_owner='dippalisrani89', repo_name='mlflow_exp_dagshub', mlflow=True)
 #n_estimators = yaml.safe_load(open("D:\exp-tracking-dvc\dvclive\params.yaml"))["n_estimators"]
+
 mlflow.set_experiment("water_exp2")
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.set_tracking_uri("https://dagshub.com/dippalisrani89/mlflow_exp_dagshub.mlflow")
 data = pd.read_csv("D:\exp_mlflow\data\water_potability.csv")
 
 from sklearn.model_selection import train_test_split
