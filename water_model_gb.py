@@ -13,7 +13,7 @@ dagshub.init(repo_owner='dippalisrani89', repo_name='mlflow_exp_dagshub', mlflow
 
 mlflow.set_experiment("water_exp2")
 mlflow.set_tracking_uri("https://dagshub.com/dippalisrani89/mlflow_exp_dagshub.mlflow")
-data = pd.read_csv("D:\exp_mlflow\data\water_potability.csv")
+data = pd.read_csv("D:\datasets\water_potability.csv")
 
 from sklearn.model_selection import train_test_split
 train_data,test_data = train_test_split(data,test_size=0.20,random_state=42)
